@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Task List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Due Date</th>
+            <th>Complete</th>
+        </tr>
+        <tr th:each="task : ${tasks}">
+            <td th:text="${task.id}"></td>
+            <td th:text="${task.description}"></td>
+            <td th:text="${task.dueDate}"></td>
+            <td><input type="checkbox" name="complete" th:checked="${task.complete}"/></td>
+            <td><a th:href="@{/tasks/delete/{id}(id=${task.id})}">Delete</a></td>
+        </tr>
+    </table>
+</body>
+</html>

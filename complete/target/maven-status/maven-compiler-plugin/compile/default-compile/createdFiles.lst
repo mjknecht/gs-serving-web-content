@@ -1,0 +1,4 @@
+com\example\servingwebcontent\Task.class
+com\example\servingwebcontent\TaskRepository.class
+com\example\servingwebcontent\TaskManagerWebContentApplication.class
+com\example\servingwebcontent\TaskController.class
